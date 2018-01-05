@@ -1,0 +1,287 @@
+@import "~antd/dist/antd.less"; 
+@import "_colors";
+@import "_variables";
+@import "_sizer_colors";
+@import "_header";
+
+@font-face {
+  font-family: ProximaNovaSoft;
+  src: url('../fonts/ProximaNovaSoft-Bold-webfont.eot');
+  src: url('../fonts/ProximaNovaSoft-Bold-webfont.svg');
+  src: url('../fonts/ProximaNovaSoft-Bold-webfont.ttf');
+  src: url('../fonts/ProximaNovaSoft-Bold-webfont.woff');
+  src: url('../fonts/ProximaNovaSoft-Medium-webfont.eot');
+  src: url('../fonts/ProximaNovaSoft-Medium-webfont.svg');
+  src: url('../fonts/ProximaNovaSoft-Medium-webfont.ttf');
+  src: url('../fonts/ProximaNovaSoft-Medium-webfont.woff');
+  src: url('../fonts/ProximaNovaSoft-Regular-webfont.eot');
+  src: url('../fonts/ProximaNovaSoft-Regular-webfont.svg');
+  src: url('../fonts/ProximaNovaSoft-Regular-webfont.ttf');
+  src: url('../fonts/ProximaNovaSoft-Regular-webfont.woff');
+  src: url('../fonts/ProximaNovaSoft-Semibold-webfont.eot');
+  src: url('../fonts/ProximaNovaSoft-Semibold-webfont.svg');
+  src: url('../fonts/ProximaNovaSoft-Semibold-webfont.ttf');
+  src: url('../fonts/ProximaNovaSoft-Semibold-webfont.woff');
+}
+
+body {
+	font-family: ProximaNovaSoft;
+    background-color: @white;
+}
+
+
+.steps {
+	 width: 100%;
+    float: left;
+    display: inline-block;
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid @light-grey-3;
+	.step-item-cover {
+		width: 480px;
+		margin: 0 auto;
+		.steps-item {
+			float: left;
+			width: 160px;
+			display: inline-block;
+			.steps-small{
+				border: 1px solid @light-grey-1;
+				background-color: @white;
+				color: @light-grey-1;
+				float: left;
+				width: 24px;
+				height: 24px;
+				line-height: 20px;
+				text-align: center;
+				font-size: 12px;
+				border-radius: 24px;
+				margin-right: 8px;
+				transition: background-color 0.3s, border-color 0.3s;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
+			.steps-item-process  {
+				background: @blue-1;
+				border-color: @blue-1;
+				color: @white;
+			}
+			.steps-item-title {
+				line-height: 25px;
+				font-weight: lighter;
+				color: @light-grey-1;
+			}
+			.item-content-process{
+				color: @black;
+			}
+		}
+	}
+}
+
+
+.page-content-wrapper {
+	width: 100%;
+    float: left;
+    display: inline-block;
+	.vendor-selection-content {
+		width: 998px;
+		margin: 0 auto;
+		padding-bottom: 5%;
+		.vendor-selection-btn {
+			width: 240px;
+			margin: 0 auto;
+			margin-top: 10%;
+			.ant-btn-primary {
+				width: 100px;
+				margin-right: 15px;
+				margin-bottom: 20px;
+			}
+		}
+		button.ant-btn.btn-current-vendor.ant-btn-primary {
+			background-color: @dark-blue-2;
+			border-color: @dark-blue-2;
+		}
+	}
+	
+	.displaynone {
+		display:none;
+	}
+	.vendor-bom-import-content{
+		width: 998px;
+		margin: 0 auto;
+		border-top: 1px solid @light-grey-3;
+		padding-top: 30px;
+		padding-bottom: 20px;
+		.vendor-bom-import-upload {
+			float: left;
+			margin-right: 20px;
+			margin-left: 26%;
+		}
+		Button {
+			width: 220px;
+			height: 50px;
+			a{
+				color: @white; 
+			}
+			a:hover{
+				color: @white; 
+			}
+		}
+	}
+}
+.import-table-content {
+	width:998px;
+	margin:0 auto;
+	.import-table-content-all{
+		width: 100%;
+		float: left;
+		border-bottom: 1px solid @light-grey-3;
+		padding-bottom: 40px;
+		.import-table-content-txt {
+			margin-top: 30px;
+			width: 100%;
+			float: left;
+			padding: 5px;
+			font-weight: 700;
+			color: @black;
+			font-size: 16px;
+			.import-table-txt-add-comp{
+				float:right;
+				text-decoration: none;
+			}
+		}
+		table#bom-report {
+			border-spacing: 0;
+			border-radius: 5px;
+			border: 1px solid @light-grey-2;
+			width: 100%;
+			font-size: 14px;
+			border-collapse: initial;
+			font-weight: normal;
+			tr th {
+				border-right: 1px solid @light-grey-3;
+				border-bottom: 1px solid @light-grey-3;
+				padding: 10px;
+				font-weight: normal;
+				color: @grey-2;
+				text-align: left;
+			}
+			tr th.th-last-cl{
+				border-right: none;
+				width: 10%;
+			}
+			tr th.bom-col-sku {
+				  width: 27%;
+				}
+			tr th.bom-col-quanity {
+					width: 10%;
+				}
+			tr td {
+				padding: 10px;
+				border-bottom: 1px solid @light-grey-3;
+				.number-right-align {
+					text-align: right;
+				}
+			}
+			tr.tr-last-cl td {
+				border-bottom: none;
+			}
+		}
+		
+	}
+}
+.report-table-content {
+	width:998px;
+	margin:0 auto;
+	.report-table-content-all{
+		width: 100%;
+		float: left;
+		border-bottom: 1px solid @light-grey-3;
+		padding-bottom: 40px;
+		.report-status-bar {
+			width: 100%;
+			float: left;
+			display: inline-block;
+			background: white;
+			text-align: center;
+			border-radius: 5px;
+			padding: 5px 25px 5px 25px;
+			background-color: @light-red-3;
+			color: @red-1;
+			.report_status-txt {
+				float: left;
+				display: inline-block;
+				text-align: center;
+				margin-top: 4px;
+			}
+			.report_status-close-icon {
+				float: right;
+				display: inline-block;
+				padding-top: 2px;
+			}
+		}
+		.report-table-content-txt {
+			margin-top: 30px;
+			width: 100%;
+			float: left;
+			padding: 5px;
+			font-weight: 700;
+			color: @black;
+			font-size: 16px;
+		}
+		table#bom-report {
+			border-spacing: 0;
+			border-radius: 5px;
+			border: 1px solid @light-grey-2;
+			width: 100%;
+			font-size: 14px;
+			border-collapse: initial;
+			font-weight: normal;
+			tr.bom-report-error:hover {
+				background-color: @light-red-3;
+			}
+			tr.bom-report-error{
+				span {
+					margin-right:5px;
+				}
+			}
+			tr th {
+				border-right: 1px solid @light-grey-3;
+				border-bottom: 1px solid @light-grey-3;
+				padding: 10px;
+				font-weight: normal;
+				color: @grey-2;
+				text-align: left;
+			}
+			tr th.th-last-cl{
+				border-right: none;
+			}
+			tr td {
+				padding: 10px;
+				border-bottom: 1px solid @light-grey-3;
+			}
+			.number-right-align {
+				text-align: right;
+			}
+			tr.tr-last-cl td {
+				border-bottom: none;
+			}
+		}
+		
+	}
+}
+	.page-button-cnt {
+		width: 100%;
+		float: left;
+		margin-top: 30px;
+		.page-button-cnt-left {
+			float:left;
+			.Button {
+				color : @black; 
+			}
+		}
+		.page-button-cnt-right {
+			float:right;
+			Button {
+				margin-left: 10px;
+			}
+		}
+	}
+	
