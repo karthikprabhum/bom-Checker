@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Row, Col, Layout , Steps , Upload, Button, Menu, Dropdown, Icon  } from 'antd';
 import CommonHeader from "./Header"
 import ToggleDisplay from 'react-toggle-display';
-var Global = require('react-global');
 import { NavLink } from 'react-router-dom'
 
 export default class Vendorselection extends React.Component {
